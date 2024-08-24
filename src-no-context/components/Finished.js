@@ -1,9 +1,6 @@
 import React from "react";
-import { useQuizContext } from "../contexts/QuizContext";
 
-export default function Finished() {
-  const { dispatch, points, maxPoints, highscore } = useQuizContext();
-
+export default function Finished({ dispatch, points, maxPoints, highscore }) {
   const percentage = (points / maxPoints) * 100;
 
   let emoji;

@@ -1,13 +1,6 @@
 import React from "react";
-import { useQuizContext } from "../contexts/QuizContext";
 
-export default function Options() {
-  const {
-    dispatch,
-    activeQuestion: { options, correctOption },
-    answer,
-  } = useQuizContext();
-
+export default function Options({ dispatch, options, correctOption, answer }) {
   return (
     <div className="options">
       {options.map((option, index) => (
